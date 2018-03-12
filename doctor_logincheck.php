@@ -1,28 +1,28 @@
 <?php
 include '../connection.php';
-$employee=$_POST['empid_1'];
-$password=$_POST['password_1'];
-$sql="SELECT COUNT(*) FROM staff WHERE (Employee_ID='$employee' AND Password='$password')";
+$docid_1=$_POST['docid_1'];
+$password_doc=$_POST['password_doc'];
+$sql="SELECT COUNT(*) FROM doctor WHERE (Doctor_ID='$docid_1' AND Password='$password_doc')";
 $result = mysqli_query($conn,$sql) or die("Error: ".mysqli_error($conn));
 $row = mysqli_fetch_array($result);
 
-if($employee=="")
+if($docid_1=="")
 { $returnfalse="Field(s) cannot be empty. Please try again.";
 	echo "<span class='false'>".$returnfalse."</span>";
 }
-else if($password=="")
+else if($password_doc=="")
 { $returnfalse="Field(s) cannot be empty. Please try again.";
 	echo "<span class='false'>".$returnfalse."</span>";
 }
 else if($row[0]==0)
 {
-	$returnfalse="Invalid Employee ID and/or Password. Please try again.";
+	$returnfalse="Invalid Doctor ID and/or Password. Please try again.";
 	echo "<span class='false'>".$returnfalse."</span>";
 }
 else
 {
 	session_start();
-	$_SESSION['empid']=$employee;
+	$_SESSION['docid']=$docid_1;
 	echo 1;
 	
 }

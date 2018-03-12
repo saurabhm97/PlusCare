@@ -1,28 +1,28 @@
 <?php
 include '../connection.php';
-$employee=$_POST['empid_1'];
-$password=$_POST['password_1'];
-$sql="SELECT COUNT(*) FROM staff WHERE (Employee_ID='$employee' AND Password='$password')";
+$patientid_1=$_POST['pid_1'];
+$number_1=$_POST['password_1'];
+$sql="SELECT COUNT(*) FROM patient WHERE (Patient_ID='$patientid_1' AND Contact_NO='$number_1')";
 $result = mysqli_query($conn,$sql) or die("Error: ".mysqli_error($conn));
 $row = mysqli_fetch_array($result);
 
-if($employee=="")
+if($patientid_1=="")
 { $returnfalse="Field(s) cannot be empty. Please try again.";
 	echo "<span class='false'>".$returnfalse."</span>";
 }
-else if($password=="")
+else if($number_1=="")
 { $returnfalse="Field(s) cannot be empty. Please try again.";
 	echo "<span class='false'>".$returnfalse."</span>";
 }
 else if($row[0]==0)
 {
-	$returnfalse="Invalid Employee ID and/or Password. Please try again.";
+	$returnfalse="You will only be able to login once a record has been created for you.";
 	echo "<span class='false'>".$returnfalse."</span>";
 }
 else
 {
 	session_start();
-	$_SESSION['empid']=$employee;
+	$_SESSION['pid']=$patientid_1;
 	echo 1;
 	
 }
