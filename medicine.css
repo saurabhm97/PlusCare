@@ -1,0 +1,253 @@
+	
+/*body
+{
+	font-family: 'PT Sans', sans-serif;
+	margin:0;
+	
+}
+
+.sec1 {
+
+  background:linear-gradient(to right,lightblue,white);
+  overflow:hidden;
+  color:white;
+    width: auto;
+   
+    padding: 30px;
+    margin-top:0px;
+}
+
+
+
+}
+
+li { display:inline; 
+}
+
+#u1 {
+font-family: 'Quattrocento Sans', sans-serif;
+}
+
+.sec2 {
+    background-color: #333;
+    overflow: hidden;
+}
+
+Style the links inside the navigation bar 
+.sec2 a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 100px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+Change the color of links on hover 
+.sec2 a:hover {
+    background-color: orange;
+    color: black;
+}
+
+ Add a color to the active/current link 
+.sec2 a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+*/
+body
+{
+	font-family: 'PT Sans', sans-serif;
+	margin:0;
+}
+
+.sec1 {
+
+  background:linear-gradient(to right,lightblue,white);
+  overflow:hidden
+  position:relative:
+  color:white;
+    width: auto;
+   
+    padding: 30px;
+    margin-top:0px;
+}
+
+
+li { display:inline; 
+}
+
+.container {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial;
+}
+
+.container a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 80px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 17px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 11px 100px;
+    background-color: inherit;
+}
+
+.container a:hover, .dropdown:hover .dropbtn {
+    background-color: orange;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.nav
+{   font-family: 'Ubuntu', sans-serif;
+	width:100%;
+	text-align:center;
+}
+.nav
+{
+border-collapse:collapse;	
+}
+
+.nav td
+{
+width:20%;
+text-align:center;	
+}
+.nav td, .loginbtn
+{
+color:white;
+background-color:#0000b3;	
+padding:10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.nav td:hover,.loginbtn:hover
+{
+color:white;
+background-color:black;	
+}
+.nav a
+{
+text-decoration:none;
+color:white;		
+}
+.loginview
+{   
+	display:block;
+	position:absolute;
+	right:0px;
+}
+.loginview1
+{   font-family: 'Ubuntu', sans-serif;
+	width:100%;
+	border-collapse:collapse;
+}
+.loginview1 td
+{
+	background:black;
+	
+}
+.loginview1 td:hover
+{
+	background:blue;
+}
+.loginview1 a
+{ text-decoration:none;
+  color: white;
+}
+
+
+
+
+
+#logo
+{
+width:430px;
+height:200px;
+
+}
+
+.sec3
+{
+font-family: 'Quattrocento Sans', sans-serif;
+
+}
+
+/*table
+{
+padding:15px;
+margin-left:520px;
+text-align:center;
+}
+tr,td
+{
+border-radius:25px;
+border:solid 2px black;
+padding:15px;
+margin-left:520px;
+text-align:center;
+
+}
+th
+{
+border-radius:25px;
+border:solid 2px black;
+padding:15px;
+margin-left:520px;
+color:white;
+background-color:blue;
+text-align:center;
+
+}
+*/
+#indiv
+{
+padding:10px;
+margin-left:10px;
+border-radius:10px;
+border:2px groove yellow;
+color:white;
+background-color:red;
+height:100px;
+width:400px;
+
+}
+
+

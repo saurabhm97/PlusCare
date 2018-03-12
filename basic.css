@@ -1,0 +1,260 @@
+body
+{
+	font-family: 'PT Sans', sans-serif;
+	margin:0;
+}
+
+.sec1 {
+	text-align: center;
+  background:linear-gradient(to right,lightblue,white);
+  overflow:hidden;
+  position:relative:
+  color:white;
+    width: auto;
+
+    padding: 30px;
+    margin-top:0px;
+}
+
+
+li { display:inline;
+}
+
+#u1 {
+font-family: 'Quattrocento Sans', sans-serif;
+}
+
+.sec2 {
+	position:relative;
+}
+/*
+ Style the links inside the navigation bar
+.sec2 a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 100px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+ Change the color of links on hover
+.sec2 a:hover {
+    background-color: orange;
+    color: black;
+}
+
+ Add a color to the active/current link
+.sec2 a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+*/
+#p1 {
+font-family: 'Ubuntu', sans-serif;
+text-align:center;
+font-size:60px;
+}
+#logo
+{
+width:430px;
+height:200px;
+
+}
+.sec3
+{
+font-family: 'Quattrocento Sans', sans-serif;
+
+}
+
+
+.container {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial;
+}
+
+.container a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 80px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 11px 100px;
+    background-color: inherit;
+}
+
+.container a:hover, .dropdown:hover .dropbtn {
+    background-color: orange;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.navu
+{
+	width:100%;
+	text-align:center;
+}
+
+.loginview
+{
+	display:block;
+	position:absolute;
+	right:0px;
+}
+.navu td
+{
+width:20%;
+text-align:center;
+}
+.navu td, .loginbtn
+{
+color:white;
+background-color:#0000b3;
+padding:10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+#homeButton:hover,#contactButton:hover,#searchMedButton:hover
+{
+cursor:pointer;
+}
+.navu a
+{
+text-decoration:none;
+color:white;
+}
+.loginview1
+{
+	width:100%;
+	border-collapse:collapse;
+}
+.loginview1 td
+{
+	background:black;
+}
+.loginview1 td:hover
+{
+	background:blue;
+}
+.loginview1 a
+{ color:white;
+  text-decoration:none;
+}  
+.loginbtn:hover {
+	cursor:pointer;
+}
+
+.navu
+{
+border-collapse:collapse;
+}
+
+
+.sec4
+{
+padding:10px;
+margin-top:10px;
+margin-right:5px;
+border-radius:5px;
+float:left;
+ width: 40%;
+border:2px groove black;
+}
+.sec5
+{
+padding:10px;
+margin-top:10px;
+margin-left:5px;
+border-radius:5px;
+float:right;
+ width: 40%;
+border:2px groove black;
+}
+.sec3
+{
+border:2px double black;
+height:500px;
+font-family: 'Quattrocento Sans', sans-serif;
+}
+
+.sec3s
+{
+font-family: 'Quattrocento Sans', sans-serif;
+border:2px double blue;
+}
+
+table.med
+{
+text-align:center;
+}
+table.med tr, table.med td
+{
+border-radius:25px;
+border:solid 2px black;
+padding:15px;
+margin-left:520px;
+text-align:center;
+
+}
+table.med th
+{
+border-radius:25px;
+border:solid 2px black;
+padding:15px;
+margin-left:520px;
+color:white;
+background-color:blue;
+text-align:center;
+
+}
+
+#indiv
+{
+padding:10px;
+margin-left:10px;
+border-radius:10px;
+border:2px groove yellow;
+color:white;
+background-color:red;
+height:100px;
+width:400px;
+
+}

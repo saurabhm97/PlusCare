@@ -1,0 +1,138 @@
+body
+{
+	font-family: 'PT Sans', sans-serif;
+	
+	
+}
+
+.sec1 {
+
+  background:linear-gradient(to right,lightblue,white);
+  overflow:hidden;
+  color:white;
+    width: auto;
+   
+    padding: 30px;
+    margin-top:0px;
+}
+
+
+
+}
+
+li { display:inline; 
+}
+
+#u1 {
+font-family: 'Quattrocento Sans', sans-serif;
+}
+
+.sec2 {
+    background-color: #333;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.sec2 a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 100px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.sec2 a:hover {
+    background-color: orange;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.sec2 a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#logo
+{
+width:430px;
+height:200px;
+float:center;
+margin-left:550px;
+
+}
+
+.sec3
+{
+font-family: 'Quattrocento Sans', sans-serif;
+
+}
+
+table
+{
+padding:15px;
+margin-left:520px;
+text-align:center;
+}
+tr,td
+{
+border-radius:25px;
+border:solid 2px black;
+padding:15px;
+margin-left:520px;
+text-align:center;
+
+}
+th
+{
+border-radius:25px;
+border:solid 2px black;
+padding:15px;
+margin-left:520px;
+color:white;
+background-color:blue;
+text-align:center;
+
+}
+
+#indiv
+{
+padding:10px;
+margin-left:10px;
+border-radius:10px;
+border:2px groove yellow;
+color:white;
+background-color:red;
+height:100px;
+width:400px;
+
+}
+
+.sec4
+{
+padding:10px;
+margin-top:10px;
+margin-right:5px;
+border-radius:5px;
+float:left;
+ width: 40%;
+border:2px groove black;
+}
+.sec5
+{
+padding:10px;
+margin-top:10px;
+margin-left:5px;
+border-radius:5px;
+float:right;
+ width: 40%;
+border:2px groove black;
+}
+.sec3
+{
+border:2px double black;
+height:500px;
+}
+
