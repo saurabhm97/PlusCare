@@ -1,140 +1,177 @@
 <?php
-include "connection.php"
-?>
-<script type="text/javascript">
-function closeWindow() {
-    setTimeout(function() {
-	window.open('','_parent','');
-    window.close();
-    }, 5000);
-    }
+session_start();
 
-    
-if(navigator.userAgent.indexOf("Chrome") == -1)
-{ alert("Please use Chrome for a better experience.");
-  window.onload = closeWindow();
-  
-}	
-</script>
-<!DOCTYPE html>
+include '../connection.php';
+
+
+if(!isset($_SESSION['docid']))
+{
+echo'You do not seem to be logged in. Please login first.';
+}
+else
+{
+$docid=$_SESSION['docid'];
+$sql="SELECT Doctor_ID FROM doctor WHERE Doctor_ID='$docid'";
+$result = mysqli_query($conn,$sql) or die('Error: '.mysqli_error($conn));
+$row = mysqli_fetch_array($result);
+$id=$row[0];
+$sql2="SELECT Name FROM doctor WHERE Doctor_ID='$id'";
+$result2 = mysqli_query($conn,$sql2) or die('Error: '.mysqli_error($conn));
+$row2 = mysqli_fetch_array($result2);
+$name=$row2[0];
+$sql3="SELECT DOB FROM doctor WHERE Doctor_ID='$id'";
+$result3 = mysqli_query($conn,$sql3) or die('Error: '.mysqli_error($conn));
+$row3 = mysqli_fetch_array($result3);
+$dob=$row3[0];
+$sql4="SELECT Gender FROM doctor WHERE Doctor_ID='$id'";
+$result4 = mysqli_query($conn,$sql4) or die('Error: '.mysqli_error($conn));
+$row4 = mysqli_fetch_array($result4);
+$gender=$row4[0];
+$sql5="SELECT Desgn FROM doctor WHERE Doctor_ID='$id'";
+$result5 = mysqli_query($conn,$sql5) or die('Error: '.mysqli_error($conn));
+$row5 = mysqli_fetch_array($result5);
+$desgn=$row5[0];
+$sql6="SELECT Password FROM doctor WHERE Doctor_ID='$id'";
+$result6 = mysqli_query($conn,$sql6) or die('Error: '.mysqli_error($conn));
+$row6 = mysqli_fetch_array($result6);
+$pass=$row6[0];
+$sql7="SELECT PasswordDefault FROM doctor WHERE Doctor_ID='$id'";
+$result7 = mysqli_query($conn,$sql7) or die('Error: '.mysqli_error($conn));
+$row7 = mysqli_fetch_array($result7);
+$passd=$row7[0];
+
+?>
+<!doctype html>
 <html>
 <head>
-
-<link rel="stylesheet" type="text/css" href="basic.css">
-
-<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans" rel="stylesheet">
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-    $("#contentShow").load("home.php");
-    $(".loginview").hide();
-	$(".loginview").width('20%');
-	$(".loginbtn").hover(function(){
-		$(".loginview").fadeIn();
-	});
-	$(".loginview").mouseleave(function(){
-		$(".loginview").hide();
-});
-
-  $("#homeButton").click(function(){
-		  $("#contentShow").load("home.php");
-      $("#homeButton").css({
-      "background-color": "black",
-      "text-decoration":"underline"
+<title>PlusCare Solutions©-Doctor Login</title>
+<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<link rel='stylesheet' href='styles.css'>
+ <script src='http://code.jquery.com/jquery-latest.min.js' type='text/javascript'></script>
+ <script src='script.js'></script>
+ <script>
+ $(document).ready(function(){
+ $('#profileview').click(function(){
+		  $('#contentShow').load('profile1.php');
+      $('#profileview').css({
+      'color': 'black',
+      'text-decoration':'underline'
     });
-    $("#searchMedButton").css({
-    "background-color": "#0000b3",
+	$("#changepass1").css({
+    'color':'black',
     "text-decoration":"none"
   });
-  $("#contactButton").css({
-  "background-color": "#0000b3",
-  "text-decoration":"none"
-});
+	
 	});
-  $("#bookButton").click(function(){
-		  $("#contentShow").load("book_appointment.php");
-	});
-  $("#searchMedButton").click(function(){
-		  $("#contentShow").load("medicine.php");
-      $("#searchMedButton").css({
-      "background-color": "black",
-      "text-decoration":"underline"
+ $('#changepass1').click(function(){
+		  $('#contentShow').load('doctor_changepass.php');
+      $('#changepass1').css({
+      'color': 'black',
+      'text-decoration':'underline'
     });
-    $("#contactButton").css({
-    "background-color": "#0000b3",
+	$("#profileview").css({
+    'color':'black',
     "text-decoration":"none"
   });
-  $("#homeButton").css({
-  "background-color": "#0000b3",
-  "text-decoration":"none"
-});
 	});
-  $("#contactButton").click(function(){
-		  $("#contentShow").load("contact.php");
-      $("#searchMedButton").css({
-      "background-color": "#0000b3",
-      "text-decoration":"none"
+ $('#createpres').click(function(){
+		  $('#contentShow').load('view_appointments.php');
+      
     });
-    $("#contactButton").css({
-    "background-color": "black",
-    "text-decoration":"underline"
-  });
-  $("#homeButton").css({
-  "background-color": "#0000b3",
-  "text-decoration":"none"
-});
-});
-
-});
-</script>
-
-
-<title>PlusCare</title>
-
-<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Prociono" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-
-
+ $('#viewpast').click(function(){
+		  $('#contentShow').load('view_past.php');
+      
+    });
+ $('#cancelapp').click(function(){
+		  $('#contentShow').load('delete_appointments.php');
+      
+    });
+ $('#viewpatient').click(function(){
+		  $('#contentShow').load('enter_patientid.php');
+      
+    });
+ $('#viewmed').click(function(){
+		  $('#contentShow').load('tempmed.php');
+      
+    });
+ });	
+ </script>
 </head>
 
+
+
+
 <body>
+<div class='sec1'>
 
-<div class="sec1">
-<center><a href="/"><img id="logo" src="pluscarelogo.png"></a></center>
- </div>
-<div class="sec2">
-<table class="navu">
+<table width='100%'>
 <tr>
-<td id="homeButton"><div>Home</div></td>
-<td id="searchMedButton"><div>Search for Medicine</div></td>
-<td id="contactButton"><div>Contact Us</div></td>
-<td class="loginbtn">Login</td>
+<td width='33%'>
+<img id='logo' src='/logos/pluscarelogo.png'></a>
+</td>
+<td width='33%' style='vertical-align:middle'>
+<center><span id='p1'>Welcome, <?php echo $name;?></span></center><br>
+</td>
+<td width='33%' style='vertical-align:middle'>
+<table width="100%" style="text-align:center;border:thin solid black">
+<td>
+<tr id="tr1">
+<td id='profileview' width="33%">Profile</td> 
+
+<td id='changepass1' width="33%">Change Password</td>
+
+<td><a id="signout" href="../logout.php" style="text-decoration:none;">Sign out</td>
 </tr>
+</td>
 </table>
-
-<div class="loginview">
-<table class="loginview1">
-<tr>
-<td><a href="/login/staff_login.php"</a>Staff Login</td>
-</tr>
-<tr>
-<td><a href="/login/doctor_login.php"</a>Doctor Login</td>
-</tr>
-<tr>
-<td><a href="/login/patient_login.php"</a>Patient Login</td>
+</td>
 </tr>
 </table>
 </div>
+<table width='100%'>
+<tr>
+<td width='20%' valign='top'>
+<div id='cssmenu'>
+<ul>
+   <li class='active'><a href='../doctor'><span>Home</span></a></li>
+   <li class='has-sub'><a href='#'><span>Lab Reports</span></a>
+      <ul>
+         <li><a href='#'><span>View All Reports</span></a></li>
+      </ul>
+   </li>
+   <li class='has-sub'><a href='#'><span>Appointments</span></a>
+      <ul>
+         <li><span id='createpres' style="cursor:pointer;">Generate Prescription</span></li>
+		 <li><span id='viewpast' style="cursor:pointer;">View Past Appointments</span></li>
+		 <li><span id='cancelapp' style="cursor:pointer;">Cancel Appointment</span></li>
+      </ul>
+   </li>
+   <li class='has-sub'><a href='#'><span>Patient</span></a>
+      <ul>
+         <li><span id='viewpatient' style="cursor:pointer;">View Patient Record</span></li>
+         
+      </ul>
+   </li>
+   <li class='has-sub'><a href='#'><span>Medicines</span></a>
+       <ul>
+         <li><span id='viewmed' style="cursor:pointer;">View All Medicines</span></li>
+		
+	</ul>
+	</li>
+
+</ul>
 </div>
+</td>
+<td width='80%' style='vertical-align:top'>	
+<span><?php if($pass==$passd) echo"<p><center>Please change your default password for better security.</center></p>";?></span>
 
+<div id='contentShow'></div>
+<span id="result4"></span>
+</td>
+</tr>
 
-<div id="contentShow"></div>
-
-
- </body>
+</table>
+</body>
 </html>
-
+<?php } ?>
